@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <div className="footer">
-      <p>made with React</p>
+      <p className="text-center mt-6">made with React and tailwindcss</p>
     </div>
   );
 }
