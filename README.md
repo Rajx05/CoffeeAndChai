@@ -1,5 +1,7 @@
 ☕ Coffee Shop Website
 
+Visit https://coffeeandchai.netlify.app/
+
 📖 Description
 
 A modern coffee shop website built with React and TailwindCSS. Currently focused on the frontend design and user interface, with backend functionality (such as order management, authentication, and database integration) planned for future implementation.
