@@ -10,7 +10,9 @@ function Head({ search, setSearch }) {
     <div className="navbar mb-20 sticky top-0">
       <nav className="bg-espresso p-4 shadow-lg ">
         <div className="flex justify-between items-center max-w-7xl mx-auto ">
-          <h1 className="text-cream text-4xl font-pacifico ">Chai & Coffee</h1>
+          <h1 className="text-cream text-4xl font-pacifico ">
+            Coffee and Chai
+          </h1>
 
           <div className="relative border border-cream rounded-3xl bg-mocha p-3 pl-10 transition-transform duration-300 hover:scale-110 ">
             <input
