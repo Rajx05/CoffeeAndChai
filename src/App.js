@@ -9,7 +9,7 @@ import Highlights from "./components/highlights";
 function App() {
   // Global States
   const [page, setPage] = useState(0);
-  const [isLogin, setLogin] = useState(false);
+  const [isLogin] = useState(false);
   const [search, setSearch] = useState("");
 
   // setter functions
