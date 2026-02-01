@@ -74,13 +74,10 @@ const coffeeData = [
 function Menu({ islogin }) {
   return (
     <>
-      <div
-        className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 m-5 border-2 border-cream p-10 pt-5 rounded-lg"
-        id="menu"
-      >
-        <h1 className="col-span-full text-4xl font-bold font-pacifico text-center text-cream mb-8">
-          Menu
-        </h1>
+      <h1 className="text-2xl mt-8 sm:text-4xl font-bold font-pacifico text-center text-cream ">
+        Menu
+      </h1>
+      <div className="grid place-items-center grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 m-5 border-2 border-cream p-3 pt-5  rounded-lg">
         {/* Conditional Rendering */}
         {coffeeData.map((coffee) => (
           <Coffee

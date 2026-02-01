@@ -7,14 +7,14 @@ function Head({ search, setSearch }) {
 
   console.log(search);
   return (
-    <div className="navbar mb-20 sticky top-0">
+    <div className="navbar">
       <nav className="bg-espresso p-4 shadow-lg ">
-        <div className="flex justify-between items-center max-w-7xl mx-auto ">
-          <h1 className="text-cream text-4xl font-pacifico ">
+        <div className="flex items-center justify-between md:flex md:justify-between md:items-center  max-w-7xl mx-auto ">
+          <h1 className="text-cream text-2xl font-pacifico md:text-4xl ">
             Coffee and Chai
           </h1>
 
-          <div className="relative border border-cream rounded-3xl bg-mocha p-3 pl-10 transition-transform duration-300 hover:scale-110 ">
+          <div className="hidden md:block relative border border-cream rounded-3xl bg-mocha p-3 pl-10 transition-transform duration-300 hover:scale-110 w-1/4 lg:w-auto ">
             <input
               type="text"
               placeholder={
@@ -40,7 +40,7 @@ function Head({ search, setSearch }) {
               <path d="m21 21-4.35-4.35"></path>
             </svg>
           </div>
-          <ul className="flex gap-6">
+          <ul className="hidden md:flex md:gap-6">
             <li>
               <a
                 href="#home"
@@ -74,6 +74,22 @@ function Head({ search, setSearch }) {
               </a>
             </li>
           </ul>
+          <button className="md:hidden text-cream hover:text-caramel transition-colors duration-300">
+            <svg
+              className="w-8 h-8"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
         </div>
       </nav>
     </div>

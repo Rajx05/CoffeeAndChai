@@ -18,13 +18,23 @@ function App() {
   }
 
   return (
-    <>
-      <Head search={search} setSearch={setSearch} />
-      <Highlights />
-      <Menu islogin={isLogin} />
-      <PageNav setter={setter} page={page} />
-      <Footer />
-    </>
+    <div className="flex flex-col min-h-screen">
+      <header className="sticky top-0 z-50 mb-12">
+        <Head search={search} setSearch={setSearch} />
+      </header>
+
+      <main className="flex-grow flex flex-col gap-8">
+        <Highlights />
+        <div id="menu">
+          <Menu islogin={isLogin} />
+        </div>
+        <PageNav setter={setter} page={page} />
+      </main>
+
+      <footer className="mt-auto">
+        <Footer />
+      </footer>
+    </div>
   );
 }
 
