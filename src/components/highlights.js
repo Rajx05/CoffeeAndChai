@@ -50,6 +50,11 @@ export default function Highlights() {
                     : "opacity-0 translate-x-full"
               }`}
             >
+              <img
+                src="/highlightsImages/CraftedWithCare.jpeg"
+                alt="coffee"
+                className="h-40 w-40"
+              ></img>
               <h3 className="text-xl font-semibold text-caramel">
                 {item.title}
               </h3>

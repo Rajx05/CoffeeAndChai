@@ -25,9 +25,7 @@ function App() {
 
       <main className="flex-grow flex flex-col gap-8">
         <Highlights />
-        <div id="menu">
-          <Menu islogin={isLogin} />
-        </div>
+        <Menu islogin={isLogin} />
         <PageNav setter={setter} page={page} />
       </main>
 
