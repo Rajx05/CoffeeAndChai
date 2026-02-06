@@ -1,5 +1,7 @@
 ☕ Coffee Shop Website
 
+![Site Preview](public/sitePreview.png)
+
 Visit https://coffeeandchai.netlify.app/
 
 📖 Description
