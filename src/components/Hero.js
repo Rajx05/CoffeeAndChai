@@ -6,19 +6,19 @@ const slides = [
     id: 1,
     title: "Freshly Roasted",
     description: "Roasted every week to lock in aroma and flavor.",
-    image: "/highlightsImages/freshlyRoasted.jpeg",
+    image: "/heroImages/freshlyRoasted.jpeg",
   },
   {
     id: 2,
     title: "Ethically Sourced",
     description: "Beans sourced directly from responsible farms.",
-    image: "/highlightsImages/ethicallySourced.png",
+    image: "/heroImages/ethicallySourced.png",
   },
   {
     id: 3,
     title: "Crafted with Care",
     description: "Every cup brewed with precision and passion.",
-    image: "/highlightsImages/CraftedWithCare.jpeg",
+    image: "/heroImages/CraftedWithCare.jpeg",
   },
 ];
 
@@ -33,7 +33,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="relative h-[700px] md:h-[500px] w-full overflow-hidden bg-espresso">
+    <div className="relative h-[700px] md:h-[500px] w-full overflow-hidden bg-espresso bg-opacity-70">
       <AnimatePresence mode="wait">
         <motion.div
           key={currentIndex}
@@ -41,13 +41,13 @@ const Hero = () => {
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -100 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
-          className="absolute inset-0 flex flex-col md:flex-row items-center justify-start pt-24 md:justify-center md:pt-0 px-6 md:px-20 gap-8"
+          className="absolute inset-0 flex flex-col md:flex-row items-center justify-start pt-2 md:justify-center md:pt-2 px-6 md:px-20 gap-8"
         >
           <div className="flex-1 w-full flex items-center justify-center m-4">
             <motion.img
               src={slides[currentIndex].image}
               alt={slides[currentIndex].title}
-              className="w-full max-w-xs h-[250px] md:h-[350px] md:max-w-md object-cover rounded-2xl shadow-2xl border-4 border-mocha"
+              className="w-full max-w-xs h-[300px] md:h-[350px] md:max-w-md object-cover rounded-2xl shadow-2xl "
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.3 }}
