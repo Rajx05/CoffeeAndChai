@@ -4,7 +4,7 @@ import Head from "./components/head";
 import Menu from "./components/menu";
 import Footer from "./components/footer";
 import PageNav from "./components/pageNav";
-import Highlights from "./components/highlights";
+import Hero from "./components/Hero";
 
 function App() {
   // Global States
@@ -24,7 +24,7 @@ function App() {
       </header>
 
       <main className="flex-grow flex flex-col gap-8">
-        <Highlights />
+        <Hero />
         <Menu islogin={isLogin} />
         <PageNav setter={setter} page={page} />
       </main>
