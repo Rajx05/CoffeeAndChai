@@ -11,7 +11,7 @@ function Head({ search, setSearch }) {
       <nav className="bg-espresso p-4 shadow-lg ">
         <div className="flex items-center justify-between md:flex md:justify-between md:items-center  max-w-7xl mx-auto ">
           <h1 className="text-cream text-2xl font-pacifico md:text-4xl ">
-            Coffee and Chai
+            Coffee & Chai
           </h1>
 
           <div className="hidden md:block relative border border-cream rounded-3xl bg-mocha p-3 pl-10 transition-transform duration-300 hover:scale-110 w-1/4 lg:w-auto ">
