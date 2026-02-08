@@ -43,7 +43,7 @@ function Head({ search, setSearch }) {
           <ul className="hidden md:flex md:gap-6">
             <li>
               <a
-                href="#home"
+                href="/home"
                 className="text-cream tracking-widest hover:text-caramel hover:underline transition-all duration-300"
               >
                 Home
@@ -51,7 +51,7 @@ function Head({ search, setSearch }) {
             </li>
             <li>
               <a
-                href="#menu"
+                href="/menu"
                 className="text-cream tracking-widest hover:text-caramel hover:underline transition-all duration-300"
               >
                 Menu
@@ -67,7 +67,7 @@ function Head({ search, setSearch }) {
             </li>
             <li>
               <a
-                href="#contact"
+                href="/contact"
                 className="text-cream tracking-widest hover:text-caramel hover:underline transition-all duration-300"
               >
                 Contact
