@@ -121,7 +121,7 @@ function App() {
               element={
                 <Menu
                   islogin={isLogin}
-                  handleSearchBarRender={handleSearchBarRender}
+                  h={handleSearchBarRender}
                   coffeeData={coffeeData}
                   filteredItems={filteredItems}
                 />

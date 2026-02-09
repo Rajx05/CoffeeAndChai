@@ -1,10 +1,11 @@
 import { useEffect } from "react";
 import Coffee from "./coffee";
 
-function Menu({ islogin, handleSearchBarRender, filteredItems }) {
+function Menu({ islogin, h, filteredItems }) {
+  console.log(h);
   useEffect(() => {
-    handleSearchBarRender(true);
-  }, []);
+    h(true);
+  }, [h]);
 
   return (
     <>

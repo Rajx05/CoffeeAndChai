@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 
 const slides = [
@@ -24,7 +24,6 @@ const slides = [
 
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % slides.length);

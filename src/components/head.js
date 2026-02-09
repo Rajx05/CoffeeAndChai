@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Head({ handleInputChange, needSearch, search }) {
   const searchPlaceholders = [
     "What are you craving?",
@@ -48,36 +50,36 @@ function Head({ handleInputChange, needSearch, search }) {
           {/* Nav Links */}
           <ul className="hidden md:flex md:gap-6">
             <li>
-              <a
-                href="/"
+              <Link
+                to="/"
                 className="text-cream tracking-widest hover:text-caramel hover:underline transition-all duration-300"
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="/menu"
+              <Link
+                to="/menu"
                 className="text-cream tracking-widest hover:text-caramel hover:underline transition-all duration-300"
               >
                 Menu
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#about"
+              <Link
+                to="/about"
                 className="text-cream tracking-widest hover:text-caramel hover:underline transition-all duration-300"
               >
                 About
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="/contact"
+              <Link
+                to="/contact"
                 className="text-cream tracking-widest hover:text-caramel hover:underline transition-all duration-300"
               >
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
           <button className="md:hidden text-cream hover:text-caramel transition-colors duration-300">
