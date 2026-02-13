@@ -1,21 +1,17 @@
 import { useEffect } from "react";
-import Coffee from "./coffee";
+import Coffee from "./coffeeCard";
 
-function Menu({ islogin, h, filteredItems }) {
-  console.log(h);
+function Menu({ handleSearchBarRender, filteredItems, updateCart }) {
   useEffect(() => {
-    h(true);
-  }, [h]);
+    handleSearchBarRender(true);
+  }, [handleSearchBarRender]);
 
   return (
     <>
       {/* {console.log(filteredItems)} */}
 
-      <h1 className="text-2xl mt-8 sm:text-4xl font-bold font-pacifico text-center text-cream ">
-        Menu
-      </h1>
       <div
-        className="grid place-items-center grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 m-5 border-2 border-cream p-3 pt-5  rounded-lg"
+        className={`grid gap-8 px-4 w-full  grid-cols-1  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  pt-8  rounded-lg`}
         id="menu"
       >
         {filteredItems.map((coffee) => (
@@ -23,8 +19,9 @@ function Menu({ islogin, h, filteredItems }) {
             name={coffee.name}
             price={coffee.price}
             img={coffee.img}
-            login={islogin}
             key={coffee.id}
+            updateCart={updateCart}
+            id={coffee.id}
           />
         ))}
       </div>

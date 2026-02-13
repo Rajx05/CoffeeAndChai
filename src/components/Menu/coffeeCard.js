@@ -1,17 +1,15 @@
-import { useState } from "react";
-
 function Coffee(props) {
-  const [noOfItems, setNoOfItems] = useState(0);
+  // const [noOfItems, setNoOfItems] = useState(0);
 
-  // function to update no of items in cart
-  function updateItems() {
-    setNoOfItems((n) => n + 1);
-    const audio = new Audio("nice.mp3");
-    audio.play();
-  }
+  // // function to update no of items in cart
+  // function updateItems() {
+  //   setNoOfItems((n) => n + 1);
+  //   const audio = new Audio("nice.mp3");
+  //   // audio.play();
+  // }
 
   return (
-    <div className="flex flex-col  rounded-3xl bg-mocha p-3 shadow-lg  hover:-translate-y-2 duration-200 w-4/5 sm:w-auto ">
+    <div className="flex flex-col  rounded-3xl bg-mocha p-3 shadow-lg  hover:-translate-y-1 duration-200 min-w-60 ">
       <div className="flex justify-center ">
         <img
           src={props.img}
@@ -28,7 +26,8 @@ function Coffee(props) {
         </p>
         <button
           className="flex items-center justify-center gap-2 font-semibold rounded-lg bg-caramel px-2 py-2 text-cream text-sm hover:bg-darkCaramel transition-colors"
-          onClick={updateItems}
+          value={props}
+          onClick={props.updateCart}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +44,7 @@ function Coffee(props) {
             <circle cx="20" cy="21" r="1"></circle>
             <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
           </svg>
-          Add {noOfItems}
+          Add
         </button>
       </div>
     </div>

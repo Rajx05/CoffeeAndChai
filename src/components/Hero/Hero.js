@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import { useNavigate } from "react-router-dom";
 
 const slides = [
   {
@@ -22,14 +23,21 @@ const slides = [
   },
 ];
 
-const Hero = () => {
+const Hero = ({ handleSearchBarRender }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    handleSearchBarRender(false);
+  }, [handleSearchBarRender]);
+
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % slides.length);
     }, 5000);
     return () => clearInterval(timer);
   }, []);
+
+  const navigate = useNavigate();
 
   return (
     <div className="relative h-[700px] md:h-[500px] w-full overflow-hidden bg-espresso bg-opacity-70">
@@ -72,6 +80,7 @@ const Hero = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={() => navigate("/menu")}
               className="mt-8 bg-caramel text-espresso px-8 py-3 rounded-full font-bold hover:bg-darkCaramel transition-colors"
             >
               Order Now
