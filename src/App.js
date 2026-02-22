@@ -6,22 +6,25 @@ import Logo from "./components/Navbar/brandName";
 import CartButton from "./components/Navbar/cartButton";
 import NavLinks from "./components/Navbar/navLinks";
 import SearchBar from "./components/Navbar/searchBar";
-
+import Login from "./components/login.js";
 import Menu from "./components/Menu/menu";
 import Footer from "./components/footer";
 import Hero from "./components/Hero/Hero";
 import Cart from "./components/Menu/cart";
 import coffeeData from "./coffeeData.json";
 import CartItems from "./components/Menu/cartItems";
+import LoginButton from "./components/Navbar/loginButton.js";
+
+const initialCart = "empty";
 
 function App() {
   // Global States & Variables
-  const [isLogin] = useState(false);
+  // const [isLogin] = useState(false);
   const [needSearch, setNeedSearch] = useState(false);
 
   const [filteredItems, setFilteredItems] = useState(coffeeData);
   const [showCart, setShowCart] = useState(false);
-  const [cart, setCart] = useState("empty");
+  const [cart, setCart] = useState(initialCart);
 
   // setter functions
   const handleSearchBarRender = (toggle) => {
@@ -34,8 +37,8 @@ function App() {
 
   const updateCart = (e) => {
     setCart(e.target.value);
-    // console.log(e.target.value);
   };
+  console.log(cart);
 
   return (
     <BrowserRouter>
@@ -53,7 +56,11 @@ function App() {
 
             <NavLinks />
 
-            <CartButton handleCartToggle={handleCartToggle} />
+            {/* Cart & Login button */}
+            <div className="flex flex-row gap-2">
+              <CartButton handleCartToggle={handleCartToggle} />
+              <LoginButton />
+            </div>
           </Head>
         </header>
 
@@ -87,6 +94,7 @@ function App() {
               path="/"
               element={<Hero handleSearchBarRender={handleSearchBarRender} />}
             />
+            <Route path="/login" element={<Login />} />
           </Routes>
         </main>
 

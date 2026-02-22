@@ -26,7 +26,7 @@ function Coffee(props) {
         </p>
         <button
           className="flex items-center justify-center gap-2 font-semibold rounded-lg bg-caramel px-2 py-2 text-cream text-sm hover:bg-darkCaramel transition-colors"
-          value={props}
+          value={props.name}
           onClick={props.updateCart}
         >
           <svg
