@@ -8,7 +8,7 @@ html {
 }
 
 body {
-  background-image: url("../public/coffee-beans-bg.png");
+  background-image: url("/coffee-beans-bg.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

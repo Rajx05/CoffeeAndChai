@@ -1,27 +1,41 @@
 import { useState } from "react";
-
+import { Link } from "react-router-dom";
+import { supabase } from "../supabaseClient";
 const Login = () => {
   // const [data, setData] = useState({
   //   username: "",
   //   password: "",
   // });
 
-  const [username, setUser] = useState("");
+  const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
 
-  function handleSubmit(e) {
-    e.preventDefault();
+  async function signInWithEmail() {
+    const { data, error } = await supabase.auth.signInWithPassword({
+      email: email,
+      password: pass,
+    });
+    if (error) {
+      alert("user doesn't exist");
+      console.log(error);
+    } else {
+      alert("you are logged in !");
+    }
+  }
 
+  function handleSubmit(e) {
     // send the login details to api
+    e.preventDefault();
+    signInWithEmail();
   }
 
   function handleChange(e) {
     e.target.type === "text"
-      ? setUser(e.target.value)
+      ? setEmail(e.target.value)
       : setPass(e.target.value);
     console.log("Input Type:", e.target.type);
   }
-  console.log(username);
+  console.log(email);
   console.log(pass);
 
   return (
@@ -29,12 +43,11 @@ const Login = () => {
       <div>
         <h1 className="text-center font-bold font pt-2">Login</h1>
       </div>
-
       <div className="flex justify-center">
         <form onSubmit={handleSubmit}>
           <div className="flex flex-col my-4 gap-5">
             <div>
-              <label>Username: </label>
+              <label>Email: </label>
               <input
                 type="text"
                 className="text-black p-1"
@@ -53,6 +66,7 @@ const Login = () => {
             </div>
           </div>
           <button>Submit</button>
+          <Link to="/signup">Create a new account</Link>
         </form>
       </div>
     </div>

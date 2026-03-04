@@ -6,6 +6,9 @@ const searchPlaceholders = [
   "Type your mood…",
 ];
 
+const placeholderSentence =
+  searchPlaceholders[Math.floor(Math.random() * searchPlaceholders.length)];
+
 export default function SearchBar({
   setFilteredItems,
   needSearch,
@@ -30,11 +33,7 @@ export default function SearchBar({
         <div className="hidden md:block relative border border-cream rounded-3xl bg-mocha p-3 pl-10 transition-transform duration-300 hover:scale-110 w-1/4 lg:w-auto ">
           <input
             type="text"
-            placeholder={
-              searchPlaceholders[
-                Math.floor(Math.random() * searchPlaceholders.length)
-              ]
-            }
+            placeholder={placeholderSentence}
             value={search}
             onChange={handleInputChange}
             className="bg-mocha text-cream placeholder-cream w-full outline-none"

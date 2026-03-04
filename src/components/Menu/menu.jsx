@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import Coffee from "./coffeeCard";
+import Coffee from "./coffeeCard.jsx";
 
 function Menu({ handleSearchBarRender, filteredItems, updateCart }) {
   useEffect(() => {
@@ -8,8 +8,6 @@ function Menu({ handleSearchBarRender, filteredItems, updateCart }) {
 
   return (
     <>
-      {/* {console.log(filteredItems)} */}
-
       <div
         className={`grid gap-8 px-4 w-full  grid-cols-1  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  pt-8  rounded-lg`}
         id="menu"

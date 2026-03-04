@@ -7,6 +7,7 @@ function Coffee(props) {
   //   const audio = new Audio("nice.mp3");
   //   // audio.play();
   // }
+  // console.log(props.name);
 
   return (
     <div className="flex flex-col  rounded-3xl bg-mocha p-3 shadow-lg  hover:-translate-y-1 duration-200 min-w-60 ">
@@ -27,7 +28,9 @@ function Coffee(props) {
         <button
           className="flex items-center justify-center gap-2 font-semibold rounded-lg bg-caramel px-2 py-2 text-cream text-sm hover:bg-darkCaramel transition-colors"
           value={props.name}
-          onClick={props.updateCart}
+          onClick={() =>
+            props.updateCart({ name: props.name, price: props.price })
+          }
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
